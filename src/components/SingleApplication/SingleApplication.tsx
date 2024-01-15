@@ -13,27 +13,33 @@ const SingleApplication = ({ application }) => {
     <div className={styles.SingleApplication}>
       <div className={styles.cell}>
         <sub>Company</sub>
-        {application.company}
+        <p className={styles.bold}>{application.company}</p>
       </div>
       <div className={styles.cell}>
         <sub>Name</sub>
-        {application.first_name} {application.last_name}
+        <p className={styles.bold}>
+          {application.first_name} {application.last_name}
+        </p>
       </div>
       <div className={styles.cell}>
         <sub>Email</sub>
-        {application.email}
+        <p className={styles.email}>{application.email}</p>
       </div>
       <div className={styles.cell}>
         <sub>Loan Amount</sub>
-        {formattedCurrency}
+        <p className={styles.bold}>{formattedCurrency}</p>
       </div>
       <div className={styles.cell}>
         <sub>Application Date</sub>
-        {moment(application.date_created).format('L')}
+        <p className={styles.bold}>
+          {moment(application.date_created).format('L')}
+        </p>
       </div>
       <div className={styles.cell}>
         <sub>Expiry date</sub>
-        {moment(application.expiry_date).format('L')}
+        <p className={styles.bold}>
+          {moment(application.expiry_date).format('L')}
+        </p>
       </div>
     </div>
   );

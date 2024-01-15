@@ -9,6 +9,15 @@
   margin-bottom: 1rem;
 }
 
+.bold {
+  font-weight: bold;
+}
+
+.email {
+  color: #246ac1;
+  font-weight: bold;
+}
+
 .cell {
   text-align: left;
   border-right: 1px solid #eee;

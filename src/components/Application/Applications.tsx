@@ -26,17 +26,20 @@ const Applications = () => {
   }, []);
 
   return (
-    <div className={styles.Applications}>
-      {applications.map((application) => (
-        <SingleApplication key={application.id} application={application} />
-      ))}
-
-      <Button
-        className={'button-class'}
-        text="Load more"
-        onClick={loadMoreApplications}
-      />
-    </div>
+    <>
+      <div className={styles.containeirApplications}>
+        <div className={styles.Applications}>
+          {applications.map((application) => (
+            <SingleApplication key={application.id} application={application} />
+          ))}
+        </div>
+        <Button
+          className={'button-class'}
+          text="Load more"
+          onClick={loadMoreApplications}
+        />
+      </div>
+    </>
   );
 };
 
