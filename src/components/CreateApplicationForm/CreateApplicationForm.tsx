@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 import {
   FormProvider,
   RegisterOptions,
@@ -6,13 +6,13 @@ import {
   useFormContext,
   UseFormRegister,
   UseFormReturn,
-} from "react-hook-form";
-import { Button } from "../ui/Button/Button";
-import styles from "./CreateApplicationForm.module.css";
+} from 'react-hook-form';
+import { Button } from '../../ui/Button/Button';
+import styles from './CreateApplicationForm.module.css';
 
-const ERROR_REQUIRED = "Required";
-const ERROR_MIN_AMOUNT = "Min. Amount >= 1000";
-const ERROR_MAX_AMOUNT = "Max. Amount <= 150000";
+const ERROR_REQUIRED = 'Required';
+const ERROR_MIN_AMOUNT = 'Min. Amount >= 1000';
+const ERROR_MAX_AMOUNT = 'Max. Amount <= 150000';
 
 type TFormValues = {
   first_name: string;
@@ -23,7 +23,7 @@ type TFormValues = {
 
 export const CreateApplicationForm = () => {
   const methods = useForm<TFormValues>();
-  const onSubmit = (values: TFormValues) => console.log("SUBMIT", values);
+  const onSubmit = (values: TFormValues) => console.log('SUBMIT', values);
 
   return (
     <FormProvider {...methods}>
@@ -56,11 +56,11 @@ export const CreateApplicationForm = () => {
           id="loan_type"
           label="Loan Type"
           options={[
-            ["Flexi-Loan", "Flexi-Loan"],
-            ["Business Loan", "Business Loan"],
-            ["Cash Advance", "Cash Advance"],
-            ["RLS", "RLS"],
-            ["CBILS", "CBILS"],
+            ['Flexi-Loan', 'Flexi-Loan'],
+            ['Business Loan', 'Business Loan'],
+            ['Cash Advance', 'Cash Advance'],
+            ['RLS', 'RLS'],
+            ['CBILS', 'CBILS'],
           ]}
         />
         <Button className={styles.submitButton}>Create new application</Button>
@@ -69,7 +69,7 @@ export const CreateApplicationForm = () => {
   );
 };
 
-const Input = ({ id, label, type = "text", validation = {} }) => {
+const Input = ({ id, label, type = 'text', validation = {} }) => {
   const { showError, error, register } = useFormField(id);
 
   return (
@@ -134,13 +134,13 @@ const useFormField = (id: string) => {
   };
 };
 
-type THookFormError = UseFormReturn["formState"]["errors"][string];
+type THookFormError = UseFormReturn['formState']['errors'][string];
 export function castErrorToString(error: THookFormError): string | undefined {
-  if (typeof error === "string") {
+  if (typeof error === 'string') {
     return error;
   }
 
-  if (typeof error?.message === "string") {
+  if (typeof error?.message === 'string') {
     return error.message;
   }
 

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import SingleApplication from './SingleApplication';
-import { getSingleApplicationFixture } from './__fixtures__/applications.fixture';
+import SingleApplication from '../SingleApplication/SingleApplication';
+import { getSingleApplicationFixture } from '../../__fixtures__/applications.fixture';
 import styles from './Applications.module.css';
-import { getApplications } from './api/applicationsServices';
-import { Button } from './ui/Button/Button';
+import { getApplications } from '../../api/applicationsServices';
+import { Button } from '../ui/Button/Button';
 
 const Applications = () => {
   // const applications = getSingleApplicationFixture;
