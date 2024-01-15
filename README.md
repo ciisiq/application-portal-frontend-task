@@ -34,4 +34,3 @@ see attached [Figma Link](https://www.figma.com/file/5NOBLAgL17n4qoR82vhYY5/iwoc
 - The task focusses mainly on desktop but we would be very happy to see mobile considered.
 - Remember to check your project runs before submitting. - we will be running it in development mode to review.
 - Feel free to refactor the code where appropriate.
-# Wheeljack-Optio-Topaz-frontend-task
